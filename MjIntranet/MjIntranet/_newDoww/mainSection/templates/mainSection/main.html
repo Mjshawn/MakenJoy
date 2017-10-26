@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favi.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/components/menu.min.css">
+    <link rel="stylesheet" href="reset.css" />
+    <script src="https://use.fontawesome.com/dbf98e1f6f.js"></script>
+    <!--
+  <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    -->
+    <style>
+        @import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        body {
+            width: 100%;
+            font-family: 'Nanum Gothic', serif;
+        }
+
+        h1 {
+
+        }
+        h3 {
+
+        }
+        li {
+
+            font-size: 1em;
+            margin-left: 5px;
+            margin-top: 1px;
+        }
+
+        a {
+            width: 200px;
+            height: 80px;
+            font-size: 1.1em;
+
+        }
+        .pure-button {
+            background-color: #d1e2ff;
+        }
+        .box {
+            box-sizing: border-box;
+        }
+        iframe {
+            margin-top: 100px;
+            width: 100%;
+            height: 700px;
+            overflow-x: hidden;
+        }
+        .auto{
+            width: 100%;
+        }
+        .img1 {
+            text-align: left;
+        }
+        i {
+            margin-right: 8px;
+        }
+        .ui.menu {
+            margin: 0 !important;
+        }
+        .img2 {
+            display: none !important;
+        }
+        @media screen and (max-width:700px) {
+            span {
+                display: none;
+            }
+            a{
+                font-size: 2em;
+            }
+            .img2 {
+                display: block !important;
+            }
+            .img1 {
+                display:none !important;
+            }
+        }
+
+    </style>
+    <title>MakenJoy</title>
+</head>
+<body>
+<!--
+<script type="text/javascript" src="mystuff.js"></script>
+-->
+<div class="ui item menu box" >
+    <div class="item">
+        <img class="img1" src="_logo.png">
+        <img class="img2" src="favi.png">
+    </div>
+</div>
+<div class="ui six item menu box" >
+    <a class="item" href="https://ppkm.cafe24.com/" target="_blank"><i class="fa fa-wikipedia-w" aria-hidden="true"></i><span>Wiki</span></a>
+    <a class="item" href="https://trello.com/" target="_blank"><i class="fa fa-trello" aria-hidden="true"></i><span>Trello</span></a>
+    <a class="item" href="https://github.com/" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i><span>Github</span></a>
+    <a class="item" href="https://webmail.makenjoy.net/" target="_blank"><i class="fa fa-address-card-o" aria-hidden="true"></i><span>Webmail</span></a>
+    <a class="item" href="https://drive.google.com/drive/" target="_blank"><i class="fa fa-google" aria-hidden="true"></i><span>Google Drive</span></a>
+    <a class="item" href="https://calendar.google.com/" target="_blank"><i class="fa fa-calendar" aria-hidden="true"></i><span>Google Calendar</span></a>
+</div>
+
+<form action="" method="get">
+    <input type="text" name="q" />
+    <input type="submit" value="검색">
+</form>
+
+<ul>
+{% for list in dbList %}
+    <li>{{ list.id }}번</li>
+    <li>제목 : {{ list.title }}</li>
+    <li>작성자 : {{  list.author }}</li>
+    <li>내용 : {{ list.contents }}</li>
+
+{% endfor %}
+
+</ul>
+
+<iframe src="https://calendar.google.com/calendar/embed?title=MJ%20corp&amp;showTitle=0&amp;height=600&amp;wkst=1&amp;hl=ko&amp;bgcolor=%23FFFFFF&amp;src=en.south_korea%23holiday%40group.v.calendar.google.com&amp;color=%23b90e28&amp;src=2e5r8mr95qsumksogkncdloh8k%40group.calendar.google.com&amp;color=%2323164E&amp;src=blffot637do35g8hc1hf9a046s%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FSeoul" frameborder="0" scrolling="yes"></iframe>
+
+<!--
+ <p>
+ <a href="http://validator.w3.org/check?uri=referer">
+ <img src="http://www.w3.org/Icons/valid-xhtml10-blue" alt="Valid XHTML 1.0 Strict" height="31" width="88" />
+ </a>
+ </p>
+-->
+
+</body>
+</html>
+
+<!-- 170626_1625_Shawn Menu link, Icon, favicon 추가 -->
+
+
