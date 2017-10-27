@@ -108,18 +108,18 @@
 
 <form action="" method="get">
     <input type="text" name="q" />
-    <input type="submit" value="검색">
+    <input type="submit" value="제목으로 검색">
 </form>
 
 <ul>
 {% for list in dbList %}
     <li>{{ list.id }}번</li>
-    <li>제목 : {{ list.title }}</li>
+    <a href="/{{ list.id }}">
+        <li>제목 : {{ list.title }}</li>
+    </a>
     <li>작성자 : {{  list.author }}</li>
     <li>내용 : {{ list.contents }}</li>
-
 {% endfor %}
-
 </ul>
 
 <iframe src="https://calendar.google.com/calendar/embed?title=MJ%20corp&amp;showTitle=0&amp;height=600&amp;wkst=1&amp;hl=ko&amp;bgcolor=%23FFFFFF&amp;src=en.south_korea%23holiday%40group.v.calendar.google.com&amp;color=%23b90e28&amp;src=2e5r8mr95qsumksogkncdloh8k%40group.calendar.google.com&amp;color=%2323164E&amp;src=blffot637do35g8hc1hf9a046s%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FSeoul" frameborder="0" scrolling="yes"></iframe>
