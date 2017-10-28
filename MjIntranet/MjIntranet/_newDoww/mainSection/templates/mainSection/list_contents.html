@@ -7,5 +7,15 @@
 <body>
     <h1>{{ member.title }}</h1>
     <h2>{{ member.contents }}</h2>
+
+    <hr>
+    {% for comment in member.comment_set.all %}
+        <h2>
+            <li>
+                {{ comment.author }}
+                {{ comment.message }}
+            </li>
+        </h2>
+    {% endfor %}
 </body>
 </html>

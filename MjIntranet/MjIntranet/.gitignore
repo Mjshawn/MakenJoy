@@ -1,3 +1,14 @@
 *.idea
 node_modules
 .DS_Store
+db.sqlite3
+__pycache__
+.ipynb_checkpoints
+share
+bin
+include
+lib
+pip-selfcheck.json
+*.ipynb
+migrations
+*.pyc

@@ -22,3 +22,11 @@ class Member(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Member)
+    author = models.CharField(max_length=100)
+    message = models.TextField()
+    created_date = models.DateTimeField(auto_now_add = True)
+    updated_date = models.DateTimeField(auto_now = True)

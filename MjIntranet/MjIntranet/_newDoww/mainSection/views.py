@@ -20,3 +20,4 @@ def list_contents(request, id):
     return render(request, 'mainSection/list_contents.html', {
         'member' : member
     })
+
