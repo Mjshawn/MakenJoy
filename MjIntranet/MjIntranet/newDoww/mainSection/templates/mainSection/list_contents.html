@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ member.id }}</title>
+</head>
+<body>
+    <h1>{{ member.title }}</h1>
+    <h2>{{ member.contents }}</h2>
+
+    {% if member.picture %}
+    <p><img src="{{ member.picture.url }}" alt=""></p>
+    {% endif %}
+
+    <hr>
+    <ul>
+        {% for list in member.comment_set.all %}
+        {# 1:N 관계에서 내가만든 함수에 각 값을 넣어서 온 거 #}
+        <li>{{  list.post }}</li>
+        <li>
+            {{ list.message }}
+            {{ list.user }}
+        </li>
+        {% endfor %}
+    </ul>
+
+
+</body>
+</html>
